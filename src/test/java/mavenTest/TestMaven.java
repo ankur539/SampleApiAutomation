@@ -21,18 +21,18 @@ import io.restassured.specification.ResponseSpecification;
 
 public class TestMaven {
 	
-	WebDriver driver;
+	//WebDriver driver;
 	
 	@BeforeSuite
 	public void beforeSuite() {
 		RestAssured.baseURI = "https://cdn-api.co-vin.in/api";
-		System.setProperty("webdriver.chrome.driver", "//Users//b0228121//Documents//EclipseProjects//mavenTest//chromedriver");
+		//System.setProperty("webdriver.chrome.driver", "E://StudyMaterial//SampleApiAutomation//chromedriver");
 		
-		driver = new ChromeDriver();
+		//driver = new ChromeDriver();
 	}
 	
 	
-	@Test(enabled = true)
+	/*@Test(enabled = true)
 	public void openGoogle(Method m) {
 		System.out.println("--------------"+m.getName()+"--------------");	
 		
@@ -40,7 +40,7 @@ public class TestMaven {
 		driver.manage().window().maximize();
 		driver.quit();
 		System.out.println("Goggle is successfully opened and closed");
-	}
+	}*/
 	
 	@Test
 	public void stateDetails(Method m) {
