@@ -8,6 +8,7 @@ import java.util.Map;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import ResponsePojoClasses.RootSession;
@@ -15,10 +16,12 @@ import ResponsePojoClasses.SeatInfo;
 import ResponsePojoClasses.SessionsInfo;
 import ResponsePojoClasses.StateInfo;
 import ResponsePojoClasses.StateResponse;
+import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.specification.ResponseSpecification;
 
+@Listeners(LogListener.class)
 public class TestMaven {
 	
 	//WebDriver driver;
@@ -42,6 +45,9 @@ public class TestMaven {
 		System.out.println("Goggle is successfully opened and closed");
 	}*/
 	
+	@Owner("Priya Sharma")
+    @Severity(SeverityLevel.CRITICAL)
+	@Description("Test Case : Fetching and printing details of different states present in the country")
 	@Test
 	public void stateDetails(Method m) {
 		System.out.println("--------------"+m.getName()+"--------------");	
@@ -54,6 +60,9 @@ public class TestMaven {
 		}
 	}
 	
+	@Owner("Ankur Srivastava")
+    @Severity(SeverityLevel.NORMAL)
+	@Description("Test Case : Fetching and printing details of available vaccine seats present in a hospital")
 	@Test
 	public void availableSeatsDetails(Method m) {
 		System.out.println("--------------"+m.getName()+"--------------");	
